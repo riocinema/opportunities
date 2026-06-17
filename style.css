@@ -1,0 +1,409 @@
+:root {
+  --black: #141414;
+  --white: #ffffff;
+  --muted: #d8d8d8;
+  --line: rgba(255, 255, 255, 0.78);
+  --open-bg: #e18f94;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: "Space Mono", Courier, monospace;
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.page {
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 12px;
+}
+
+.top-links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  font-size: 10px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.top-links a {
+  text-decoration: underline;
+}
+
+.rule {
+  height: 1px;
+  background: var(--line);
+  margin: 12px 0 0;
+  width: 100%;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px 0;
+}
+
+.logo-link {
+  display: inline-block;
+  width: 34%;
+  min-width: 145px;
+  max-width: 210px;
+}
+
+.rio-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.site-header h1 {
+  margin: -4px 0 0;
+  font-family: "Arimo", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  line-height: 0.95;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-align: right;
+  text-transform: uppercase;
+  transform: translateY(16px);
+}
+
+.section {
+  padding: 8px 0 0;
+}
+
+.section h2 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.opportunity {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.opportunity.is-open {
+  background: var(--open-bg);
+  color: var(--black);
+  border-color: var(--open-bg);
+}
+
+.opportunity-toggle {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  min-height: 94px;
+  padding: 16px 32px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.opportunity-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.label {
+  display: block;
+  margin-bottom: 6px;
+  color: inherit;
+  font-size: 13px;
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.opportunity-main strong {
+  display: block;
+  font-family: "Arimo", Helvetica, Arial, sans-serif;
+  font-size: 21px;
+  line-height: 1.04;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.opportunity-main small {
+  display: block;
+  margin-top: 6px;
+  color: inherit;
+  font-family: "Space Mono", Courier, monospace;
+  font-size: 13px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.opportunity-main small span {
+  display: block;
+}
+
+.expand-icon {
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  color: inherit;
+  font-size: 30px;
+  transition: transform 0.2s ease;
+}
+
+.opportunity.is-open .expand-icon {
+  transform: rotate(45deg);
+}
+
+.opportunity-content {
+  display: none;
+  padding: 0 32px 28px;
+  color: inherit;
+}
+
+.opportunity.is-open .opportunity-content {
+  display: block;
+}
+
+.opportunity-content p,
+.opportunity-content li {
+  font-family: "Roboto Flex", "Google Sans Flex", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+  font-weight: 350;
+}
+
+.opportunity-content p {
+  margin: 0 0 18px;
+}
+
+.opportunity-content h3 {
+  margin: 32px 0 14px;
+  font-family: "Arimo", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.05;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.opportunity-content ul,
+.opportunity-content ol {
+  margin: 0 0 20px;
+  padding-left: 20px;
+}
+
+.opportunity-content li {
+  margin-bottom: 12px;
+}
+
+.opportunity-content a:not(.apply-link) {
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.apply-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid currentColor;
+  color: inherit;
+  font-size: 12px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.apply-link:hover,
+.apply-link:focus-visible {
+  background: var(--black);
+  color: var(--open-bg);
+}
+
+.apply-link .material-symbols-outlined {
+  font-size: 20px;
+}
+
+@media (min-width: 700px) {
+  .page {
+    max-width: 900px;
+    padding: 18px;
+  }
+
+  .top-links {
+    font-size: 11px;
+  }
+
+  .site-header {
+    padding: 28px 0;
+  }
+
+  .site-header h1 {
+    margin-top: -22px;
+    font-size: 56px;
+  }
+
+  .opportunity-toggle {
+    min-height: 112px;
+    padding: 22px 40px;
+  }
+
+  .opportunity-main strong {
+    font-size: 34px;
+  }
+
+  .opportunity-main small {
+    font-size: 14px;
+  }
+
+  .opportunity-content {
+    padding: 0 40px 32px;
+  }
+
+  .opportunity-content p,
+  .opportunity-content li {
+    font-size: 16px;
+  }
+
+  .opportunity-content p {
+    margin-bottom: 20px;
+  }
+
+  .opportunity-content h3 {
+    margin: 36px 0 16px;
+    font-size: 20px;
+  }
+
+  .button-row {
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .apply-link {
+    padding: 13px 16px;
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .page {
+    max-width: 1080px;
+  }
+
+  .opportunity-toggle {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .opportunity-content {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .opportunity-content p {
+    max-width: 900px;
+  }
+
+  .opportunity-content ul,
+  .opportunity-content ol {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 420px) {
+  .page {
+    max-width: 390px;
+    padding: 10px;
+  }
+
+  .top-links {
+    font-size: 9px;
+  }
+
+  .site-header {
+    gap: 12px;
+  }
+
+  .site-header h1 {
+    margin-top: -8px;
+    font-size: 24px;
+  }
+
+  .logo-link {
+    min-width: 130px;
+  }
+
+  .opportunity-toggle {
+    gap: 16px;
+    min-height: 90px;
+    padding: 15px 20px;
+  }
+
+  .opportunity-content {
+    padding: 0 20px 22px;
+  }
+
+  .label {
+    font-size: 11px;
+  }
+
+  .opportunity-main strong {
+    font-size: 18px;
+  }
+
+  .opportunity-main small {
+    font-size: 12px;
+  }
+
+  .opportunity-content p,
+  .opportunity-content li {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .opportunity-content p {
+    margin-bottom: 16px;
+  }
+
+  .opportunity-content h3 {
+    margin: 28px 0 12px;
+  }
+
+  .apply-link {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
