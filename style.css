@@ -358,8 +358,9 @@ button {
   }
 
   .site-header h1 {
-    margin-top: -8px;
+    margin: 0;
     font-size: 24px;
+    transform: translateY(-10px);
   }
 
   .logo-link {
