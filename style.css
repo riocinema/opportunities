@@ -360,7 +360,7 @@ button {
   .site-header h1 {
     margin-top: -8px;
     font-size: 24px;
-    transform: translateY(-16px);
+    transform: translateY(-160px);
   }
 
   .logo-link {
