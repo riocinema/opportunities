@@ -33,6 +33,25 @@
     .expand-icon { font-family: Arial, sans-serif; }
     .opportunity-main small { font-weight: 400; }
     .opportunity-content a { overflow-wrap: anywhere; }
+    .heritage-acknowledgement {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 24px;
+    }
+    .heritage-acknowledgement img {
+      display: block;
+      width: 200px;
+      max-width: 100%;
+      height: auto;
+      padding: 16px;
+      background: #fff;
+      flex-shrink: 0;
+    }
+    .heritage-acknowledgement p {
+      flex: 1 1 240px;
+      margin: 0;
+    }
   </style>
 </head>
 
@@ -124,7 +143,15 @@
             </div>
 
             <h3>With thanks</h3>
-            <p>This post is part of RIO FOREVER! which has been made possible with The National Lottery Heritage Fund, with thanks to National Lottery players.</p>
+            <div class="heritage-acknowledgement">
+              <img
+                src="heritage-fund-acknowledgement.svg"
+                alt="The National Lottery Heritage Fund acknowledgement stamp"
+                width="400"
+                height="400"
+              >
+              <p>This post is part of RIO FOREVER! which has been made possible with The National Lottery Heritage Fund, with thanks to National Lottery players.</p>
+            </div>
           </div>
         </details>
       </section>
